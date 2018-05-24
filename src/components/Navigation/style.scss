@@ -1,0 +1,21 @@
+.navigation {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1368px;
+    margin: 100px auto 0;
+}
+
+.navigationItem {
+    display: block;
+    flex-basis: 50%;
+    text-align: center;
+    &:not(:last-child) {
+        margin-bottom: 94px;
+    }
+    img {
+        max-width: 100%;
+        width: 260px;
+        height: 260px;
+    }
+}

@@ -1,0 +1,35 @@
+.footer {
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(126, 87, 164, 0.9);
+    z-index: 1;
+    padding: 30px 50px 40px;
+    min-height: 190px;
+}
+
+.footerWrapper {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1368px;
+    margin: 0 auto;
+}
+
+.footerColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    img {
+        max-width: 155px;
+        width: 100%;
+    }
+}
+
+.singleColumn {
+    img {
+        max-width: 93px;
+    }
+}
