@@ -4,6 +4,8 @@ import { Router } from 'preact-router';
 import Header from './Header';
 import Footer from './Footer';
 import Home from '../routes/Home';
+import Agenda from '../routes/agenda';
+import Topic from '../routes/topics';
 // import Profile from '../routes/profile';
 // import Home from 'async!../routes/home';
 // import Profile from 'async!../routes/profile';
@@ -39,9 +41,11 @@ export default class App extends Component {
 				/>
 				<Router onChange={this.handleRoute}>
 					<Home path="/" />
+					<Agenda path="/agenda" />
+					<Topic path="/topics" />
 				</Router>
 				<Footer />
-				
+
 			</div>
 		);
 	}
