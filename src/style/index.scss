@@ -1,9 +1,16 @@
+@import './variables.scss';
+@import './fonts.scss';
+
 html, body {
 	padding: 0;
 	margin: 0;
-	font-family: 'Helvetica Neue', arial, sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	font-family: 'Interstate', sans-serif;
+	font-weight: $regular;
 }
 
 *,
@@ -13,6 +20,8 @@ html, body {
 }
 
 #app {
+	display: flex;
+	flex-direction: column;
 	position: relative;
 	background-image: url('/assets/background.jpg');
 	background-repeat: no-repeat;
@@ -27,4 +36,11 @@ button {
 	&:focus {
 		outline: none;
 	}
+}
+
+ul,
+li {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
 }

@@ -4,11 +4,12 @@ import { Router } from 'preact-router';
 import Header from './Header';
 import Footer from './Footer';
 import Home from '../routes/Home';
-import Agenda from '../routes/agenda';
-import Topic from '../routes/topics';
+import Agenda from '../routes/Agenda';
+import Topic from '../routes/Topics';
 // import Profile from '../routes/profile';
 // import Home from 'async!../routes/home';
 // import Profile from 'async!../routes/profile';
+import ContentContainer from '../components/ContentContainer';
 
 if (module.hot) {
 	require('preact/debug');
@@ -39,11 +40,13 @@ export default class App extends Component {
 				<Header
 					isButtonHidden={this.state.isHomePage}
 				/>
-				<Router onChange={this.handleRoute}>
-					<Home path="/" />
-					<Agenda path="/agenda" />
-					<Topic path="/topics" />
-				</Router>
+				<ContentContainer>
+					<Router onChange={this.handleRoute}>
+						<Home path="/" />
+						<Agenda path="/agenda" />
+						<Topic path="/topics" />
+					</Router>
+				</ContentContainer>
 				<Footer />
 
 			</div>
