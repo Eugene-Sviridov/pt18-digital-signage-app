@@ -1,15 +1,19 @@
 import { Component } from 'preact';
 import Title from '../Title';
+import st from './style.scss';
+import classnames from 'classnames';
 
-export default class Container extends Component {
-    render({text, children}) {
-        return (
-            <div>
-                <Title
-                    text={text}
-                />
-                {children}
-            </div>
-        )
-    }
-}
+const Container = ({text, noBackground, children}) => {
+    const classNames = classnames(st.container, {
+        [st.noBackground]: noBackground
+    });
+
+    return (
+        <div class={classNames}>
+            { text && <Title text={text} /> }
+            {children}
+        </div>
+    )
+};
+
+export default Container;

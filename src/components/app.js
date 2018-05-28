@@ -6,6 +6,8 @@ import Footer from './Footer';
 import Home from '../routes/Home';
 import Agenda from '../routes/Agenda';
 import Topic from '../routes/Topics';
+import Speakers from '../routes/Speakers';
+import Speaker from '../routes/Speaker';
 // import Profile from '../routes/profile';
 // import Home from 'async!../routes/home';
 // import Profile from 'async!../routes/profile';
@@ -45,6 +47,8 @@ export default class App extends Component {
 						<Home path="/" />
 						<Agenda path="/agenda" />
 						<Topic path="/topics" />
+						<Speakers path="/speakers" />
+						<Speaker path="/speaker/:id" />
 					</Router>
 				</ContentContainer>
 				<Footer />

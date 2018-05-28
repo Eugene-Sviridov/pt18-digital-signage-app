@@ -1,11 +1,15 @@
 import { Component } from 'preact';
-import style from './style';
 import Navigation from '../../components/Navigation';
+import Container from '../../components/Container';
 
 export default class Home extends Component {
 	render() {
 		return (
-			<Navigation />
+			<Container
+				noBackground
+			>
+				<Navigation />
+			</Container>
 		);
 	}
 }

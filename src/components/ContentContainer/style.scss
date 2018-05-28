@@ -1,4 +1,9 @@
 .contentContainer {
+    display: flex;
+    flex-direction: column;
     flex-grow: 1;
-    background-color: #fff;
+}
+
+.noBackground {
+    background-color: transparent;
 }
