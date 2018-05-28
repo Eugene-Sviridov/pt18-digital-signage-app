@@ -1,0 +1,33 @@
+.topicsContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 771px;
+    margin: 0 auto 35px;
+}
+
+.itemContainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px ;
+    text-align: center;
+}
+
+.itemTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 204px;
+    min-height: 35px;
+    background-image: url('/assets/title/tab.png');
+    background-size: 100% 100%;
+    margin: auto auto 0;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.text {
+    font-size: 12px;
+    line-height: 14px;
+    color: #fff;
+}

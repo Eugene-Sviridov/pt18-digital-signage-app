@@ -1,15 +1,16 @@
 import { h, Component } from 'preact';
-import style from './style';
+import style from './style.scss';
 import Container from '../../components/Container';
-import Plan from '../../components/Plan';
+import TopicsContainer from '../../components/TopicsContainer';
+
 
 export default class Topic extends Component {
     render() {
         return (
             <Container
-                src="assets/title/tab.png"
                 text="topics"
             >
+            <TopicsContainer />
             </Container>
         )
     }
