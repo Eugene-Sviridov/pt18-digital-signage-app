@@ -4,7 +4,7 @@ import Container from '../../components/Container';
 import TopicsContainer from '../../components/TopicsContainer';
 
 
-export default class Topic extends Component {
+export default class Topics extends Component {
     render() {
         return (
             <Container

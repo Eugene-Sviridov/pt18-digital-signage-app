@@ -1,13 +1,14 @@
 import { Component } from 'preact';
-import st from './style.scss';
+import style from './style.scss';
 import Container from '../../components/Container';
-import SpeakerInfo from '../../components/SpeakerInfo';
+import TopicInfo from '../../components/TopicInfo';
 
-export default class Speaker extends Component {
+export default class Topic extends Component {
+
     render() {
         return (
             <Container>
-                <SpeakerInfo />
+                <TopicInfo />
             </Container>
         )
     }

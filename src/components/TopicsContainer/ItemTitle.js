@@ -1,14 +1,19 @@
 
 import { Component } from 'preact';
 import style from './style.scss';
-import { Link } from 'preact-router/match';
+import { route } from 'preact-router';
+import { getRoutePath } from '../../helpers';
 
 export default class ItemTitle extends Component {
-    render({text, href}) {
+    render({text, id}) {
+        const onItemTitleClick = () => {
+            route(getRoutePath(`topic/${id}`));
+        }
+
         return (
-            <Link class={style.itemTitle} href={href}>
+            <div class={style.itemTitle} onClick={onItemTitleClick}>
                 <span class={style.text}>{text}</span>
-            </Link>
+            </div>
         )
     }
 }

@@ -5,7 +5,8 @@ import Header from './Header';
 import Footer from './Footer';
 import Home from '../routes/Home';
 import Agenda from '../routes/Agenda';
-import Topic from '../routes/Topics';
+import Topics from '../routes/Topics';
+import Topic from '../routes/Topic';
 import Speakers from '../routes/Speakers';
 import Speaker from '../routes/Speaker';
 // import Profile from '../routes/profile';
@@ -46,9 +47,10 @@ export default class App extends Component {
 					<Router onChange={this.handleRoute}>
 						<Home path="/" />
 						<Agenda path="/agenda" />
-						<Topic path="/topics" />
+						<Topics path="/topics" />
 						<Speakers path="/speakers" />
 						<Speaker path="/speaker/:id" />
+						<Topic path="/topic/:id" />
 					</Router>
 				</ContentContainer>
 				<Footer />

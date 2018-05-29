@@ -10,47 +10,47 @@ export default class TopicsContainer extends Component {
             {
                 src: '../../assets/topics/Advanced_Machine_Learning.svg',
                 text: 'AI & Advanced Machine Learning.',
-                href: ''
+                id: '1'
             },
             {
                 src: '../../assets/topics/augmented_virtual_reality.svg',
                 text: 'augmented and virtual reality.',
-                href: ''
+                id: '2'
             },
             {
                 src: '../../assets/topics/blockchain.svg',
                 text: 'blockchain.',
-                href: ''
+                id: '3'
             },
             {
                 src: '../../assets/topics/drones.svg',
                 text: 'drones.',
-                href: ''
+                id: '4'
             },
             {
                 src: '../../assets/topics/hyperconvergence.svg',
                 text: 'hyperconvergence.',
-                href: ''
+                id: '5'
             },
             {
                 src: '../../assets/topics/things_of_interest.svg',
                 text: 'things of interest.',
-                href: ''
+                id: '6'
             },
             {
                 src: '../../assets/topics/mobility.svg',
                 text: 'mobility.',
-                href: ''
+                id: '7'
             },
             {
                 src: '../../assets/topics/security.svg',
                 text: 'security.',
-                href: ''
+                v: '8'
             },
             {
                 src: '../../assets/topics/communications.svg',
                 text: 'communications.',
-                href: ''
+                id: '9'
             }
         ]
     }
@@ -60,7 +60,7 @@ export default class TopicsContainer extends Component {
             <div class={style.topicsContainer}>
                 {
                     this.topics.map((topic) => (
-                        <TopicItem src={topic.src} text={topic.text} href={topic.href} />
+                        <TopicItem src={topic.src} text={topic.text} id={topic.id} />
                     ))
                 }
             </div>
