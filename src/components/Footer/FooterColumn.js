@@ -5,7 +5,7 @@ import classnames from 'classnames';
 export default class FooterColumn extends Component {
     render({logos}) {
         const classname = classnames(style.footerColumn, {
-            [style.singleColumn]: logos.length === 1
+            [style.threeEl]: logos.length === 3
         });
         return (
             <div className={classname}>

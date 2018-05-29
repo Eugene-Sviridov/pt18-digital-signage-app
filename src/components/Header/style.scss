@@ -1,3 +1,5 @@
+@import '../../style/variables.scss';
+
 .header {
 	position: relative;
 }
@@ -25,4 +27,12 @@
 	img {
 		max-width: 100%;
 	}
+}
+
+.hashtag {
+	font-size: 24px;
+	line-height: 28px;
+	font-weight: $regular;
+	color: #fff;
+	margin-top: 16px;
 }

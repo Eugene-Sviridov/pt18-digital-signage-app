@@ -1,6 +1,6 @@
 import { Component } from 'preact';
 import { Link } from 'preact-router/match';
-import style from './style.scss';
+import st from './style.scss';
 import HeaderButton from '../HeaderButton';
 import classnames from 'classnames';
 import { route } from 'preact-router';
@@ -8,8 +8,8 @@ import { getRoutePath } from '../../helpers';
 
 export default class Header extends Component {
 	render({isButtonHidden}) {
-		const headerClasses = classnames(style.header, {
-			[style.buttonHidden]: isButtonHidden
+		const headerClasses = classnames(st.header, {
+			[st.buttonHidden]: isButtonHidden
 		});
 
 		const goHome = () => route('/');
@@ -23,7 +23,7 @@ export default class Header extends Component {
 			<header className={headerClasses}>
 				{
 					!isButtonHidden &&
-						<div class={style.headerButtons}>
+						<div class={st.headerButtons}>
 							<HeaderButton
 								src="assets/icons/pt_back_icon.svg"
 								onClick={goBack(this.props.href)}
@@ -34,8 +34,9 @@ export default class Header extends Component {
 							/>
 						</div>
 				}
-				<div class={style.headerLogo}>
+				<div class={st.headerLogo}>
 					<img src="assets/icons/logo.svg" />
+					<div className={st.hashtag}>#JoinTheInnovation</div>
 				</div>
 			</header>
 		);
