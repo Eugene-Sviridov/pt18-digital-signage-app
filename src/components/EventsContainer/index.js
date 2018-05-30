@@ -66,7 +66,6 @@ export default class EventsContainer extends Component {
     render() {
         return (
             <div className={st.eventsContainer}>
-                <div className={st.title}>All of the presentations will take place on the main stage. Get hands-on with the latest technology between presentaions and join our expect speakers as they present their take on the technology landscape over the next 12 months.</div>
                 <div class={st.colWrapper}>
                     <EventColumn title="time." elements={this.times} />
                     <EventColumn title="event." elements={this.titles} /> 

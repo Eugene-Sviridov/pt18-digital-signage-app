@@ -21,6 +21,11 @@ export default class Navigation extends Component {
                     title="topics"
                     src="assets/navigation/topics.png"
                 />
+                <NavigationItem
+                    href="vendors"
+                    title="vendors"
+                    src="assets/navigation/vendors.png"
+                />
             </div>
         )
     }

@@ -36,8 +36,8 @@ export default class Header extends Component {
 				}
 				<div class={st.headerLogo}>
 					<img src="assets/icons/logo.svg" />
-					<div className={st.hashtag}>#JoinTheInnovation</div>
 				</div>
+				<div className={st.hashtag}>#JoinTheInnovation</div>
 			</header>
 		);
 	}

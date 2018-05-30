@@ -7,6 +7,7 @@ import Home from '../routes/Home';
 import Agenda from '../routes/Agenda';
 import Topics from '../routes/Topics';
 import Topic from '../routes/Topic';
+import Vendors from '../routes/Vendors';
 import Speakers from '../routes/Speakers';
 import Speaker from '../routes/Speaker';
 // import Profile from '../routes/profile';
@@ -51,10 +52,9 @@ export default class App extends Component {
 						<Speakers path="/speakers" />
 						<Speaker path="/speaker/:id" url={this.currentUrl} />
 						<Topic path="/topic/:id" url={this.currentUrl} />
+						<Vendors path="/vendors" />
 					</Router>
 				</ContentContainer>
-				<Footer />
-
 			</div>
 		);
 	}

@@ -1,18 +1,12 @@
 @import '../../style/variables.scss';
 
 .eventsContainer {
-    max-width: 440px;
+    max-width: 540px;
     background-color: $purple86;
     border-radius: 10px;
     margin: 0 auto;
-    color: #fff;
-    padding: 35px 30px;
-}
-
-.title {
-    margin-bottom: 40px;
-    font-size: 14px;
-    line-height: 20px;
+    color: #ffffff;
+    padding: 65px 30px;
 }
 
 .colWrapper {
@@ -35,7 +29,7 @@
 .col {
     flex-basis: 50%;
     &:first-child {
-        padding-left: 40px;
+        padding-left: 80px;
         .eventListEl {
             &:after {
                 position: absolute;
