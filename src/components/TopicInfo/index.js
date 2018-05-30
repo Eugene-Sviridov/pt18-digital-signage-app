@@ -4,11 +4,13 @@ import classnames from 'classnames';
 
 export default class TopicInfo extends Component {
     render() {
-        const classNames = classnames(st.speaker, st.even);
+        const classNames = classnames(st.topic, st.odd);
         const photo = "../../assets/topics/Advanced_Machine_Learning.svg";
         return (
-            <div className={classNames}>
-                <img className={st.speakerImg} src={photo} />
+            <div class={st.topicContainer}>
+              <div className={classNames}>
+                  <img className={st.topicImg} src={photo} />
+              </div>
             </div>
         );
     }

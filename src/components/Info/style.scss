@@ -1,14 +1,15 @@
 @import '../../style/variables.scss';
 
-.topicContainer {
+.infoContainer {
     padding: 54px 0 0;
 }
 
-.topic {
+.infoHeader {
     position: relative;
     color: #000;
     padding: 0 152px;
     &.even {
+        text-align: right;
         &:after {
             right: 0;
         }
@@ -17,6 +18,7 @@
         }
     }
     &.odd {
+        text-align: left;
         &:after {
             left: 0;
         }
@@ -50,7 +52,7 @@
     }
 }
 
-.topicImg {
+.infoImg {
     position: relative;
     width: 357px;
     height: 357px;
@@ -64,9 +66,5 @@
         object-position: center center;
         height: 100%;
         width: 100%;
-    }
-
-    .topicDescription {
-        padding: 10px 0;
     }
 }

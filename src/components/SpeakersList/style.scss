@@ -1,14 +1,10 @@
 @import '../../style/variables.scss';
+@import '../Info/style.scss';
 
 .speaker {
-    position: relative;
-    color: #000;
+    @extend .infoHeader;
     padding: 0 60px;
     &.even {
-        text-align: right;
-        &:after {
-            right: 0;
-        }
         &:before {
             left: 40%;
         }
@@ -18,12 +14,7 @@
         }
     }
     &.odd {
-        text-align: left;
-        &:after {
-            left: 0;
-        }
         &:before {
-
             left: 60%;
         }
         .speakerInfo {
@@ -32,45 +23,21 @@
         }
     }
     &:after {
-        display: block;
-        content: '';
-        position: absolute;
         width: 60%;
         height: 5px;
-        background-color: $purple61;
-        transform: translateY(-50%);
-        top: 50%;
     }
     &:before {
-        display: block;
-        content: '';
-        position: absolute;
         width: 16px;
         height: 16px;
-        border-radius: 50%;
-        border: 5px solid $purple61;
-        background-color: #fff;
-        top: 50%;
         left: 40%;
-        transform: translate(-50%, -50%);
-        z-index: 1;
+        border-width: 5px;
     }
 }
 
 .speakerImg {
-    position: relative;
+    @extend .infoImg;
     width: 143px;
     height: 143px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 6px solid $purple61;
-    z-index: 1;
-    img {
-        object-fit: cover;
-        object-position: center center;
-        height: 100%;
-        width: 100%;
-    }
 }
 
 .speakerInfo {

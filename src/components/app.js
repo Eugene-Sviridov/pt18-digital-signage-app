@@ -50,7 +50,7 @@ export default class App extends Component {
 						<Topics path="/topics" />
 						<Speakers path="/speakers" />
 						<Speaker path="/speaker/:id" />
-						<Topic path="/topic/:id" />
+						<Topic path="/topic/:id" url={this.currentUrl}/>
 					</Router>
 				</ContentContainer>
 				<Footer />
