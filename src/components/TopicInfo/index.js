@@ -1,17 +1,12 @@
 import { Component } from 'preact';
 import st from './style.scss';
-import classnames from 'classnames';
+import Info from '../Info';
 
 export default class TopicInfo extends Component {
-    render() {
-        const classNames = classnames(st.topic, st.odd);
-        const photo = "../../assets/topics/Advanced_Machine_Learning.svg";
+    render({topic}) {
+        const odd = true;
         return (
-            <div class={st.topicContainer}>
-              <div className={classNames}>
-                  <img className={st.topicImg} src={photo} />
-              </div>
-            </div>
+            <Info item={topic} odd={odd} />
         );
     }
 }

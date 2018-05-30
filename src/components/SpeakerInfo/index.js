@@ -1,12 +1,12 @@
 import { Component } from 'preact';
 import st from './style.scss';
+import Info from '../Info';
 
 export default class SpeakerInfo extends Component {
-    render() {
+    render({speaker}) {
+        const odd = speaker.id % 2 !== 0;
         return (
-            <div className={st.speakerInfo}>
-                Hey
-            </div>
+            <Info item={speaker} odd={odd} />
         );
     }
 }

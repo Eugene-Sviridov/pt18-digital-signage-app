@@ -5,7 +5,7 @@ import { route } from 'preact-router';
 import { getRoutePath } from '../../helpers';
 
 const Speaker = ({speaker, odd}) => {
-    const {id, name, title, titleImg, photo} = speaker;
+    const {id, name, title, titleImg, src} = speaker;
     const classNames = classnames(st.speaker, {
         [st.odd]: odd,
         [st.even]: !odd
@@ -24,7 +24,7 @@ const Speaker = ({speaker, odd}) => {
                     { titleImg && <img src={titleImg} />}
                 </div>
             </div>
-            <img className={st.speakerImg} src={photo} />
+            <img className={st.speakerImg} src={src} />
         </div>
     )
 };

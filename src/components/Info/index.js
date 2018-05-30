@@ -4,11 +4,11 @@ import classnames from 'classnames';
 import InfoHeader from './InfoHeader';
 
 export default class Info extends Component {
-    render({topic}) {
-        const {id, src, text} = topic;
+    render({item, odd}) {
+        const {src} = item;
         return (
             <div class={st.infoContainer}>
-                <InfoHeader src={src} odd={id % 2 !== 0} />
+                <InfoHeader src={src} odd={odd} />
             </div>
         )
     }

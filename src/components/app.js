@@ -49,8 +49,8 @@ export default class App extends Component {
 						<Agenda path="/agenda" />
 						<Topics path="/topics" />
 						<Speakers path="/speakers" />
-						<Speaker path="/speaker/:id" />
-						<Topic path="/topic/:id" url={this.currentUrl}/>
+						<Speaker path="/speaker/:id" url={this.currentUrl} />
+						<Topic path="/topic/:id" url={this.currentUrl} />
 					</Router>
 				</ContentContainer>
 				<Footer />
