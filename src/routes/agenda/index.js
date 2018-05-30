@@ -8,6 +8,7 @@ export default class Agenda extends Component {
         return (
             <Container
                 text="agenda"
+                noBackground
             >
                 <EventsContainer />
             </Container>

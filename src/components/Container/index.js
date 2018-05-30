@@ -10,7 +10,7 @@ const Container = ({text, noBackground, children}) => {
 
     return (
         <div class={classNames}>
-            { text && <Title text={text} /> }
+            { text && <Title text={text} solid={noBackground} /> }
             {children}
         </div>
     )

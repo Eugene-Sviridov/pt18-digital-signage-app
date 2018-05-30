@@ -1,3 +1,5 @@
+@import '../../style/variables.scss';
+
 .title {
     display: flex;
     align-items: center;
@@ -8,6 +10,12 @@
     background-image: url('/assets/title/tab.png');
     background-size: 100% 100%;
     margin: 0 auto 30px;
+}
+
+.solid {
+    background-image: none;
+    background-color: $purple86;
+    border-radius: 10px;
 }
 
 .text {

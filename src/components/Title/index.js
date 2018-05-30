@@ -1,11 +1,15 @@
 import { Component } from 'preact';
-import style from './style.scss';
+import st from './style.scss';
+import classnames from 'classnames';
 
 export default class Title extends Component {
-    render({text}) {
+    render({text, solid}) {
+        const classNames = classnames(st.title, {
+            [st.solid]: solid
+        });
         return (
-            <div class={style.title}>
-                <span class={style.text}>{text}</span>
+            <div class={classNames}>
+                <span class={st.text}>{text}</span>
             </div>
         )
     }

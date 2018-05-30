@@ -5,6 +5,7 @@ import speakers from './SpeakersArray.js';
 
 export default class Speakers extends Component {
     render() {
+        console.log(speakers.getSpeakers);
         return (
             <Container
                 text="speakers"
