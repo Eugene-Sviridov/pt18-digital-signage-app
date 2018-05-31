@@ -5,8 +5,9 @@ import Info from '../Info';
 export default class SpeakerInfo extends Component {
     render({speaker}) {
         const odd = speaker.id % 2 !== 0;
+        const imgBorder = false;
         return (
-            <Info item={speaker} odd={odd} />
+            <Info item={speaker} odd={odd} imgBorder={imgBorder}/>
         );
     }
 }

@@ -5,6 +5,8 @@ const speakers = [
         id: 0,
         name: 'Jamie Bartlett.',
         title: 'Guest speaker.',
+        smallTitle: 'On stage: 10:15-10:45',
+        info: 'Author of the factual bestseller The Dark Net, journalist and an engaging TED Talk speaker, Jamie Bartlett lights up the hidden corners of the internet to reveal the strange subcultures and protagonists that inhabit it – from Bitcoin miners to neo-Nazis. His areas of expertise range from internet culture and ‘the dark net’, social media research ethics, cryptocurrency and the reform to RIPA 2000.',
         src: '/assets/speakers/jamie-bartlett.png'
     },
     {
@@ -22,6 +24,8 @@ const speakers = [
     {
         id: 3,
         name: 'Sarah Shields.',
+        smallTitle: 'DellEMC',
+        info: "Sarah Shields is one of the leading female businesswomen in the UK. Sarah has been at Dell EMC since 2008 and has traversed through the company's consumer, retail, small business and now channel organisations. A strong track record of success, growth and strong leadership, Sarah is known for her sharp thinking, sense of humour and drive for success.",
         titleImg: '/assets/logos/dellemc.png',
         src: '/assets/speakers/sarah.png'
     },

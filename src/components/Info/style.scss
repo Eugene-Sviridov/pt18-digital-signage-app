@@ -57,10 +57,12 @@
     width: 357px;
     height: 357px;
     border-radius: 50%;
-    overflow: hidden;
-    border: 6px solid $purple61;
+    overflow: hidden;    
     z-index: 1;
     background-color: #fff;
+    &.border {
+        border: 6px solid $purple61;
+    }
     img {
         object-fit: cover;
         object-position: center center;
@@ -69,14 +71,38 @@
     }
 }
 
-.infoDescription {
-    max-width: 560px;
-    padding-top: 10px;
+.descriptionContainer {
+    display: flex;
+    padding: 0 10%;
 }
 
-.title {
-    display: inline-block;
-    font-size: 36px;
+.descriptionWrapper {
+    max-width: 560px;
+    &.odd {
+        margin-left: auto;
+        text-align: right;
+    }
+    &.even {
+
+    }
+}
+
+.name, .title {
+    margin: 0;
+    font-size: 48px;
     font-weight: $regular;
     color: $purple61;
+}
+
+.smallTitle {
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: $regular;
+    color: $purple61;
+}
+
+.info {
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: $regular;
 }

@@ -1,8 +1,10 @@
+@import '../../style/variables.scss';
+
 .topicsContainer {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    max-width: 771px;
+    max-width: 750px;
     margin: 0 auto 35px;
 }
 
@@ -11,22 +13,20 @@
     flex-direction: column;
     margin-bottom: 25px ;
     text-align: center;
+    cursor: pointer;
 }
 
 .itemTitle {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 204px;
+    width: 190px;
     min-height: 35px;
-    background-image: url('/assets/title/tab.png');
-    background-size: 100% 100%;
     margin: auto auto 0;
-    cursor: pointer;
 }
 
 .text {
-    font-size: 12px;
-    line-height: 14px;
-    color: #fff;
+    font-size: 18px;
+    line-height: 21px;
+    color: $purple7D;
 }

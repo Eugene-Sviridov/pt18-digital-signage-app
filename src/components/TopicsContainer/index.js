@@ -8,7 +8,7 @@ export default class TopicsContainer extends Component {
             <div class={style.topicsContainer}>
                 {
                     topics.map((topic) => (
-                        <TopicItem src={topic.src} text={topic.text} id={topic.id} />
+                        <TopicItem src={topic.src} text={topic.title} id={topic.id} />
                     ))
                 }
             </div>

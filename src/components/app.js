@@ -2,7 +2,6 @@ import { h, Component } from 'preact';
 import { Router } from 'preact-router';
 
 import Header from './Header';
-import Footer from './Footer';
 import Home from '../routes/Home';
 import Agenda from '../routes/Agenda';
 import Topics from '../routes/Topics';

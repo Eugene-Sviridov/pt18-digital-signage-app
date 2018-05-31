@@ -5,8 +5,9 @@ import Info from '../Info';
 export default class TopicInfo extends Component {
     render({topic}) {
         const odd = true;
+        const imgBorder = true;
         return (
-            <Info item={topic} odd={odd} />
+            <Info item={topic} odd={odd} imgBorder={imgBorder}/>
         );
     }
 }
