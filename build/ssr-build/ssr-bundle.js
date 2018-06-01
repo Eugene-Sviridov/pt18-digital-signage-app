@@ -1972,6 +1972,37 @@ var ContentContainer_ContentContainer = function ContentContainer(_ref) {
 };
 
 /* harmony default export */ var components_ContentContainer = (ContentContainer_ContentContainer);
+// CONCATENATED MODULE: ./components/Redirect/index.js
+function Redirect__classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function Redirect__possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function Redirect__inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+var Redirect_Redirect = function (_Component) {
+  Redirect__inherits(Redirect, _Component);
+
+  function Redirect() {
+    Redirect__classCallCheck(this, Redirect);
+
+    return Redirect__possibleConstructorReturn(this, _Component.apply(this, arguments));
+  }
+
+  Redirect.prototype.componentWillMount = function componentWillMount() {
+    Object(preact_router_es["route"])(this.props.to, true);
+  };
+
+  Redirect.prototype.render = function render() {
+    return null;
+  };
+
+  return Redirect;
+}(preact_min["Component"]);
+
+
 // CONCATENATED MODULE: ./components/app.js
 
 
@@ -1997,19 +2028,22 @@ function app__inherits(subClass, superClass) { if (typeof superClass !== "functi
 // import Profile from 'async!../routes/profile';
 
 
+
 if (false) {
 	require('preact/debug');
 }
 
-var app__ref = Object(preact_min["h"])(Home, { path: '/' });
+var app__ref = Object(preact_min["h"])(Redirect_Redirect, { path: '/', to: '/home' });
 
-var app__ref2 = Object(preact_min["h"])(Agenda, { path: '/agenda' });
+var app__ref2 = Object(preact_min["h"])(Home, { path: '/home' });
 
-var app__ref3 = Object(preact_min["h"])(Topics, { path: '/topics' });
+var app__ref3 = Object(preact_min["h"])(Agenda, { path: '/agenda' });
 
-var app__ref4 = Object(preact_min["h"])(Speakers, { path: '/speakers' });
+var app__ref4 = Object(preact_min["h"])(Topics, { path: '/topics' });
 
-var _ref5 = Object(preact_min["h"])(Vendors, { path: '/vendors' });
+var _ref5 = Object(preact_min["h"])(Speakers, { path: '/speakers' });
+
+var _ref6 = Object(preact_min["h"])(Vendors, { path: '/vendors' });
 
 var app_App = function (_Component) {
 	app__inherits(App, _Component);
@@ -2067,9 +2101,10 @@ var app_App = function (_Component) {
 					app__ref2,
 					app__ref3,
 					app__ref4,
+					_ref5,
 					Object(preact_min["h"])(routes_Speaker_Speaker, { path: '/speaker/:id', url: this.currentUrl }),
 					Object(preact_min["h"])(Topic_Topic, { path: '/topic/:id', url: this.currentUrl }),
-					_ref5
+					_ref6
 				)
 			)
 		);

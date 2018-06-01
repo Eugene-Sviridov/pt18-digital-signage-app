@@ -13,6 +13,7 @@ import Speaker from '../routes/Speaker';
 // import Home from 'async!../routes/home';
 // import Profile from 'async!../routes/profile';
 import ContentContainer from '../components/ContentContainer';
+import Redirect from '../components/Redirect';
 
 if (module.hot) {
 	require('preact/debug');
@@ -53,7 +54,8 @@ export default class App extends Component {
 				/>
 				<ContentContainer>
 					<Router onChange={this.handleRoute}>
-						<Home path="/" />
+  						<Redirect path="/" to="/home" />
+						<Home path="/home" />
 						<Agenda path="/agenda" />
 						<Topics path="/topics" />
 						<Speakers path="/speakers" />
