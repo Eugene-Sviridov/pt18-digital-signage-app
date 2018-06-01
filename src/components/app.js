@@ -14,6 +14,7 @@ import Speaker from '../routes/Speaker';
 // import Profile from 'async!../routes/profile';
 import ContentContainer from '../components/ContentContainer';
 import Redirect from '../components/Redirect';
+import createHashHistory from 'history/createHashHistory';
 
 if (module.hot) {
 	require('preact/debug');
@@ -53,7 +54,7 @@ export default class App extends Component {
 					href={this.state.isSpeakerPage ? 'speakers' : (this.state.isTopicPage ? 'topics' : false)}
 				/>
 				<ContentContainer>
-					<Router onChange={this.handleRoute}>
+					<Router onChange={this.handleRoute} history={createHashHistory()}>
 						<Home path="/" />
 						<Agenda path="/agenda" />
 						<Topics path="/topics" />
