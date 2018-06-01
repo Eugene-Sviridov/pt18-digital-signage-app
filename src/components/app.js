@@ -40,7 +40,7 @@ export default class App extends Component {
 		});
 	};
 
-	isHomePage = () => this.currentUrl === '/';
+	isHomePage = () => this.currentUrl === '/home';
 
 	isSpeakerPage = () => this.currentUrl.indexOf('speaker/') >= 0;
 	isTopicPage = () => this.currentUrl.indexOf('topic/') >= 0;

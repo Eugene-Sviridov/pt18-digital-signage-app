@@ -12,10 +12,10 @@ export default class Header extends Component {
 			[st.buttonHidden]: isButtonHidden
 		});
 
-		const goHome = () => route('/');
+		const goHome = () => route('/home');
 		const goBack = (href) => {
 			return () => {
-				route(href ? getRoutePath(href) : '/');
+				route(href ? getRoutePath(href) : '/home');
 			}
 		}
 		

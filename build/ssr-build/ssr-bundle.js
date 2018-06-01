@@ -646,11 +646,11 @@ var Header_Header = function (_Component) {
 		var headerClasses = classnames_default()(Header_style_default.a.header, (_classnames = {}, _classnames[Header_style_default.a.buttonHidden] = isButtonHidden, _classnames));
 
 		var goHome = function goHome() {
-			return Object(preact_router_es["route"])('/');
+			return Object(preact_router_es["route"])('/home');
 		};
 		var goBack = function goBack(href) {
 			return function () {
-				Object(preact_router_es["route"])(href ? getRoutePath(href) : '/');
+				Object(preact_router_es["route"])(href ? getRoutePath(href) : '/home');
 			};
 		};
 
@@ -2070,7 +2070,7 @@ var app_App = function (_Component) {
 				isTopicPage: _this.isTopicPage()
 			});
 		}, _this.isHomePage = function () {
-			return _this.currentUrl === '/';
+			return _this.currentUrl === '/home';
 		}, _this.isSpeakerPage = function () {
 			return _this.currentUrl.indexOf('speaker/') >= 0;
 		}, _this.isTopicPage = function () {
