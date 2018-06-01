@@ -40,7 +40,7 @@ export default class App extends Component {
 		});
 	};
 
-	isHomePage = () => this.currentUrl === '/home';
+	isHomePage = () => this.currentUrl === '/';
 
 	isSpeakerPage = () => this.currentUrl.indexOf('speaker/') >= 0;
 	isTopicPage = () => this.currentUrl.indexOf('topic/') >= 0;
@@ -54,8 +54,7 @@ export default class App extends Component {
 				/>
 				<ContentContainer>
 					<Router onChange={this.handleRoute}>
-  						<Redirect path="/" to="/home" />
-						<Home path="/home" />
+						<Home path="/" />
 						<Agenda path="/agenda" />
 						<Topics path="/topics" />
 						<Speakers path="/speakers" />

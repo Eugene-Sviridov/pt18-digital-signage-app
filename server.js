@@ -9,10 +9,6 @@ app.get('/', (req, res) => {
     res.sendFile('./build/index.html');
 });
 
-app.get('/home', (req, res) => {
-    res.sendFile('./build/index.html');
-});
-
 app.listen(PORT, () => {
     console.log(`App is running on ${PORT}`);
 });

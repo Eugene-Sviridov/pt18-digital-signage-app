@@ -646,11 +646,11 @@ var Header_Header = function (_Component) {
 		var headerClasses = classnames_default()(Header_style_default.a.header, (_classnames = {}, _classnames[Header_style_default.a.buttonHidden] = isButtonHidden, _classnames));
 
 		var goHome = function goHome() {
-			return Object(preact_router_es["route"])('/home');
+			return Object(preact_router_es["route"])('/');
 		};
 		var goBack = function goBack(href) {
 			return function () {
-				Object(preact_router_es["route"])(href ? getRoutePath(href) : '/home');
+				Object(preact_router_es["route"])(href ? getRoutePath(href) : '/');
 			};
 		};
 
@@ -2033,17 +2033,15 @@ if (false) {
 	require('preact/debug');
 }
 
-var app__ref = Object(preact_min["h"])(Redirect_Redirect, { path: '/', to: '/home' });
+var app__ref = Object(preact_min["h"])(Home, { path: '/' });
 
-var app__ref2 = Object(preact_min["h"])(Home, { path: '/home' });
+var app__ref2 = Object(preact_min["h"])(Agenda, { path: '/agenda' });
 
-var app__ref3 = Object(preact_min["h"])(Agenda, { path: '/agenda' });
+var app__ref3 = Object(preact_min["h"])(Topics, { path: '/topics' });
 
-var app__ref4 = Object(preact_min["h"])(Topics, { path: '/topics' });
+var app__ref4 = Object(preact_min["h"])(Speakers, { path: '/speakers' });
 
-var _ref5 = Object(preact_min["h"])(Speakers, { path: '/speakers' });
-
-var _ref6 = Object(preact_min["h"])(Vendors, { path: '/vendors' });
+var _ref5 = Object(preact_min["h"])(Vendors, { path: '/vendors' });
 
 var app_App = function (_Component) {
 	app__inherits(App, _Component);
@@ -2070,7 +2068,7 @@ var app_App = function (_Component) {
 				isTopicPage: _this.isTopicPage()
 			});
 		}, _this.isHomePage = function () {
-			return _this.currentUrl === '/home';
+			return _this.currentUrl === '/';
 		}, _this.isSpeakerPage = function () {
 			return _this.currentUrl.indexOf('speaker/') >= 0;
 		}, _this.isTopicPage = function () {
@@ -2101,10 +2099,9 @@ var app_App = function (_Component) {
 					app__ref2,
 					app__ref3,
 					app__ref4,
-					_ref5,
 					Object(preact_min["h"])(routes_Speaker_Speaker, { path: '/speaker/:id', url: this.currentUrl }),
 					Object(preact_min["h"])(Topic_Topic, { path: '/topic/:id', url: this.currentUrl }),
-					_ref6
+					_ref5
 				)
 			)
 		);
