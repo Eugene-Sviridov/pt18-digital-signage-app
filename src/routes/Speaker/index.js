@@ -9,7 +9,11 @@ export default class Speaker extends Component {
     render({url}) {
         const speaker = getItemById(url, speakers);
         return (
-            <Container>
+            <Container
+                shape
+                secondStyle={speaker.id % 2 === 0}
+                thirdStyle={speaker.id % 2 !== 0}
+            >
                 <SpeakerInfo speaker={speaker} />
             </Container>
         )

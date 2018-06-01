@@ -8,6 +8,8 @@ export default class Speakers extends Component {
         return (
             <Container
                 text="speakers"
+                shape
+                firstStyle
             >
                 <SpeakersList speakers={speakers} />
             </Container>

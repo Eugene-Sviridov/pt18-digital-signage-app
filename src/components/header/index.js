@@ -25,17 +25,17 @@ export default class Header extends Component {
 					!isButtonHidden &&
 						<div class={st.headerButtons}>
 							<HeaderButton
-								src="assets/icons/pt_back_icon.svg"
+								src="/assets/icons/pt_back_icon.svg"
 								onClick={goBack(this.props.href)}
 							/>
 							<HeaderButton
-								src="assets/icons/pt_home_icon.svg"
+								src="/assets/icons/pt_home_icon.svg"
 								onClick={goHome}
 							/>
 						</div>
 				}
 				<div class={st.headerLogo}>
-					<img src="assets/icons/logo.svg" />
+					<img src="/assets/icons/logo.svg" />
 				</div>
 				<div className={st.hashtag}>#JoinTheInnovation</div>
 			</header>

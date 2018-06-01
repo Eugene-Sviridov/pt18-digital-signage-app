@@ -9,7 +9,10 @@ export default class Topic extends Component {
     render({url}) {
         const currentTopic = getItemById(url, topicsArray);
         return (
-            <Container>
+            <Container
+                shape
+                thirdStyle
+            >
                 <TopicInfo topic={currentTopic} />
             </Container>
         )

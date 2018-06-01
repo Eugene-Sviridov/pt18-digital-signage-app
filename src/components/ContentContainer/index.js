@@ -2,7 +2,7 @@ import { Component } from 'preact';
 import st from './style.scss';
 import classnames from 'classnames';
 
-const ContentContainer = ({noBackground, children}) => {
+const ContentContainer = ({noBackground, firstStyle, children}) => {
     const classNames = classnames(st.contentContainer, {
         [st.noBackground]: noBackground
     });

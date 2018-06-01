@@ -8,3 +8,45 @@
     background-color: transparent;
     padding-top: 0;
 }
+
+.shape {
+    position: absolute;
+    transform-origin: center center;
+    pointer-events: none;
+}
+
+.backgroundFirst {
+    .shapeLeft {
+        left: 0;
+        top: -180px;
+        transform: rotate(-180deg);
+    }
+    .shapeRight {
+        right: -40px;
+        top: 400px;
+    }
+}
+
+.backgroundSecond {
+    .shapeLeft {
+        left: -40px;
+        top: -180px;
+        transform: rotate(-180deg);
+    }
+    .shapeRight {
+        right: -40px;
+        top: 400px;
+    }
+}
+
+.backgroundThird {
+    .shapeLeft {
+        left: -20px;
+        top: 200px;
+        transform: rotate(-180deg);
+    }
+    .shapeRight {
+        right: -60px;
+        top: 0;
+    }
+}
