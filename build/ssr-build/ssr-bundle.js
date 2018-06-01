@@ -627,7 +627,7 @@ function Header__inherits(subClass, superClass) { if (typeof superClass !== "fun
 
 
 
-var _ref2 = Object(preact_min["h"])('img', { src: 'assets/icons/logo.svg' });
+var _ref2 = Object(preact_min["h"])('img', { src: '/assets/icons/logo.svg' });
 
 var Header_Header = function (_Component) {
 	Header__inherits(Header, _Component);
@@ -661,11 +661,11 @@ var Header_Header = function (_Component) {
 				'div',
 				{ 'class': Header_style_default.a.headerButtons },
 				Object(preact_min["h"])(HeaderButton_ButtonHome, {
-					src: 'assets/icons/pt_back_icon.svg',
+					src: '/assets/icons/pt_back_icon.svg',
 					onClick: goBack(this.props.href)
 				}),
 				Object(preact_min["h"])(HeaderButton_ButtonHome, {
-					src: 'assets/icons/pt_home_icon.svg',
+					src: '/assets/icons/pt_home_icon.svg',
 					onClick: goHome
 				})
 			),
@@ -854,13 +854,19 @@ var Container_Container = function Container(_ref) {
 
     var text = _ref.text,
         noBackground = _ref.noBackground,
+        firstStyle = _ref.firstStyle,
+        secondStyle = _ref.secondStyle,
+        thirdStyle = _ref.thirdStyle,
+        shape = _ref.shape,
         children = _ref.children;
 
-    var classNames = classnames_default()(Container_style_default.a.container, (_classnames = {}, _classnames[Container_style_default.a.noBackground] = noBackground, _classnames));
+    var classNames = classnames_default()(Container_style_default.a.container, (_classnames = {}, _classnames[Container_style_default.a.noBackground] = noBackground, _classnames[Container_style_default.a.backgroundFirst] = shape && firstStyle, _classnames[Container_style_default.a.backgroundSecond] = shape && secondStyle, _classnames[Container_style_default.a.backgroundThird] = shape && thirdStyle, _classnames));
 
     return Object(preact_min["h"])(
         'div',
         { 'class': classNames },
+        shape && Object(preact_min["h"])('img', { className: Container_style_default.a.shape + ' ' + Container_style_default.a.shapeLeft, src: '/assets/shape.png' }),
+        shape && Object(preact_min["h"])('img', { className: Container_style_default.a.shape + ' ' + Container_style_default.a.shapeRight, src: '/assets/shape.png' }),
         text && Object(preact_min["h"])(Title_Title, { text: text, solid: noBackground }),
         children
     );
@@ -1590,7 +1596,10 @@ var Topic_Topic = function (_Component) {
         var currentTopic = getItemById(url, TopicsArray);
         return Object(preact_min["h"])(
             components_Container,
-            null,
+            {
+                shape: true,
+                thirdStyle: true
+            },
             Object(preact_min["h"])(TopicInfo_TopicInfo, { topic: currentTopic })
         );
     };
@@ -1827,7 +1836,9 @@ function Speakers__inherits(subClass, superClass) { if (typeof superClass !== "f
 var Speakers__ref = Object(preact_min["h"])(
     components_Container,
     {
-        text: 'speakers'
+        text: 'speakers',
+        shape: true,
+        firstStyle: true
     },
     Object(preact_min["h"])(components_SpeakersList, { speakers: SpeakersArray })
 );
@@ -1922,7 +1933,11 @@ var routes_Speaker_Speaker = function (_Component) {
         var speaker = getItemById(url, SpeakersArray);
         return Object(preact_min["h"])(
             components_Container,
-            null,
+            {
+                shape: true,
+                secondStyle: speaker.id % 2 === 0,
+                thirdStyle: speaker.id % 2 !== 0
+            },
             Object(preact_min["h"])(SpeakerInfo_SpeakerInfo, { speaker: speaker })
         );
     };
@@ -1945,6 +1960,7 @@ var ContentContainer_ContentContainer = function ContentContainer(_ref) {
     var _classnames;
 
     var noBackground = _ref.noBackground,
+        firstStyle = _ref.firstStyle,
         children = _ref.children;
 
     var classNames = classnames_default()(ContentContainer_style_default.a.contentContainer, (_classnames = {}, _classnames[ContentContainer_style_default.a.noBackground] = noBackground, _classnames));
@@ -2008,15 +2024,23 @@ var app_App = function (_Component) {
 		}
 
 		return _ret = (_temp = (_this = app__possibleConstructorReturn(this, _Component.call.apply(_Component, [this].concat(args))), _this), _this.state = {
-			isHomePage: false
+			isHomePage: false,
+			isSpeakerPage: false,
+			isTopicPage: false
 		}, _this.handleRoute = function (e) {
 			_this.currentUrl = e.url;
 
 			_this.setState({
-				isHomePage: _this.isHomePage()
+				isHomePage: _this.isHomePage(),
+				isSpeakerPage: _this.isSpeakerPage(),
+				isTopicPage: _this.isTopicPage()
 			});
 		}, _this.isHomePage = function () {
 			return _this.currentUrl === '/';
+		}, _this.isSpeakerPage = function () {
+			return _this.currentUrl.indexOf('speaker/') >= 0;
+		}, _this.isTopicPage = function () {
+			return _this.currentUrl.indexOf('topic/') >= 0;
 		}, _temp), app__possibleConstructorReturn(_this, _ret);
 	}
 	/** Gets fired when the route changes.
@@ -2030,7 +2054,8 @@ var app_App = function (_Component) {
 			'div',
 			{ id: 'app' },
 			Object(preact_min["h"])(Header_Header, {
-				isButtonHidden: this.state.isHomePage
+				isButtonHidden: this.state.isHomePage,
+				href: this.state.isSpeakerPage ? 'speakers' : this.state.isTopicPage ? 'topics' : false
 			}),
 			Object(preact_min["h"])(
 				components_ContentContainer,
@@ -2337,7 +2362,7 @@ module.exports = {"navigation":"navigation__bwRhI","navigationItem":"navigationI
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-module.exports = {"container":"container__iAle2","noBackground":"noBackground__3tA_o"};
+module.exports = {"container":"container__iAle2","noBackground":"noBackground__3tA_o","shape":"shape__2Knvl","backgroundFirst":"backgroundFirst__9uMrr","shapeLeft":"shapeLeft__1ljF6","shapeRight":"shapeRight__1zBzc","backgroundSecond":"backgroundSecond__2Ffcy","backgroundThird":"backgroundThird__3QfPP"};
 
 /***/ }),
 
