@@ -24,24 +24,32 @@ export default class App extends Component {
 	 *	@param {string} event.url	The newly routed URL
 	 */
 	state = {
-		isHomePage: false
+		isHomePage: false,
+		isSpeakerPage: false,
+		isTopicPage: false
 	};
 
 	handleRoute = e => {
 		this.currentUrl = e.url;
 
 		this.setState({
-			isHomePage: this.isHomePage()
+			isHomePage: this.isHomePage(),
+			isSpeakerPage: this.isSpeakerPage(),
+			isTopicPage: this.isTopicPage()
 		});
 	};
 
 	isHomePage = () => this.currentUrl === '/';
+
+	isSpeakerPage = () => this.currentUrl.indexOf('speaker/') >= 0;
+	isTopicPage = () => this.currentUrl.indexOf('topic/') >= 0;
 
 	render() {
 		return (
 			<div id="app">
 				<Header
 					isButtonHidden={this.state.isHomePage}
+					href={this.state.isSpeakerPage ? 'speakers' : (this.state.isTopicPage ? 'topics' : false)}
 				/>
 				<ContentContainer>
 					<Router onChange={this.handleRoute}>
