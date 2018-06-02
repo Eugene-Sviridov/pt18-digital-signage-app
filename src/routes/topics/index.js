@@ -9,6 +9,8 @@ export default class Topics extends Component {
         return (
             <Container
                 text="topics"
+                shape
+                firstStyle
             >
               <TopicsContainer topics={topicsArray}/>
             </Container>

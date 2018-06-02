@@ -52,23 +52,21 @@
     }
 }
 
-.infoImg {
+.imgWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
-    width: 357px;
-    height: 357px;
+    width: 360px;
+    height: 360px;
+    border: 6px solid $purple61;
     border-radius: 50%;
-    overflow: hidden;    
-    z-index: 1;
     background-color: #fff;
-    &.border {
-        border: 6px solid $purple61;
-    }
-    img {
-        object-fit: cover;
-        object-position: center center;
-        height: 100%;
-        width: 100%;
-    }
+    z-index: 1;
+}
+
+.infoImg { 
+    max-width: 240px;
 }
 
 .descriptionContainer {

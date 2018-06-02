@@ -11,8 +11,10 @@ export default class TopicItem extends Component {
         }
 
         return (
-            <div class={style.itemContainer} onClick={onItemTitleClick}>
-                <img src={src} />
+            <div className={style.itemContainer} onClick={onItemTitleClick}>
+                <div className={style.itemImg}>
+                    <img src={src} />
+                </div>
                 <ItemTitle text={text} id={id} />
             </div>
         )

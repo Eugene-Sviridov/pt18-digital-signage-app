@@ -8,12 +8,11 @@ export default class InfoHeader extends Component {
             [st.odd]: odd,
             [st.even]: !odd
         });
-        const imgClassNames = classnames(st.infoImg, {
-            [st.border]: imgBorder
-        });
         return (
             <div className={classNames}>
-                <img className={imgClassNames} src={src} />
+                <div className={st.imgWrapper}>
+                    <img className={st.infoImg} src={src} />
+                </div>
             </div>
         );
     }
