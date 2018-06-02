@@ -5,10 +5,13 @@ import InfoHeader from './InfoHeader';
 import InfoDescription from './InfoDescription';
 
 export default class Info extends Component {
-    render({item, odd, imgBorder}) {
+    render({item, odd, imgBorder, isSpeaker}) {
         const {src, title, smallTitle, name, info} = item;
+        const containerClassname = classnames(st.infoContainer, {
+            [st.isSpeaker]: isSpeaker
+        })
         return (
-            <div class={st.infoContainer}>
+            <div class={containerClassname}>
                 <InfoHeader src={src} odd={odd} imgBorder={imgBorder}/>
                 <InfoDescription
                     name={name}

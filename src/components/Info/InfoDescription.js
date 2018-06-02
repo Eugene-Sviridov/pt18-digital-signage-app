@@ -11,10 +11,10 @@ export default class InfoDescription extends Component {
         return (
             <div className={st.descriptionContainer}>
                 <div className={classNames}>
-                    <p className={st.name}>{name}</p>
-                    <p className={st.title}>{title}</p>
-                    <p className={st.smallTitle}>{smallTitle}</p>
-                    <p className={st.info}>{info}</p>
+                    <div className={st.name}>{name}</div>
+                    <div className={st.title}>{title}</div>
+                    <div className={st.smallTitle}>{smallTitle}</div>
+                    <div className={st.info}>{info}</div>
                 </div>
             </div>
         );
