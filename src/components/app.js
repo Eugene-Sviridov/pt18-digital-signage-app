@@ -1,6 +1,7 @@
 import { h, Component } from 'preact';
 import { Router } from 'preact-router';
 
+import Credit from '../components/Credit';
 import Header from './Header';
 import Home from '../routes/Home';
 import Agenda from '../routes/Agenda';
@@ -64,6 +65,9 @@ export default class App extends Component {
 						<Vendors path="/vendors" />
 					</Router>
 				</ContentContainer>
+				<Credit
+					url={this.currentUrl}
+				/>
 			</div>
 		);
 	}
