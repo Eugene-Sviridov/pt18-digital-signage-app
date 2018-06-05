@@ -3,7 +3,7 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    padding: 0 60px;
+    padding: 60px 60px 0;
 }
 
 .vendorEl {
@@ -12,9 +12,113 @@
     padding: 0 20px;
     text-align: center;
     margin-bottom: 80px;
-    img {
-        max-width: 100%;
-        max-height: 96px;
-    }
+}
 
+.barracuda {
+    width: 170px;
+    height: 85px;
+}
+.citrix {
+    width: 170px;
+    height: 69px;
+}
+.dell {
+    width: 170px;
+    height: 29px;
+}
+.dell {
+    width: 170px;
+    height: 29px;
+}
+.digitalxraid {
+    width: 200px;
+    height: 110px;
+}
+.hp {
+    width: 100px;
+    height: 100px;
+}
+.huawei {
+    width: 93px;
+    height: 92px;
+}
+.ikonic {
+    width: 144px;
+    height: 46px;
+}
+.jct600 {
+    width: 154px;
+    height: 53px;
+}
+.lenovo {
+    width: 194px;
+    height: 96px;
+}
+.bitdefender {
+    width: 155px;
+    height: 77px;
+}
+.canon {
+    width: 148px;
+    height: 31px;
+}
+.dji {
+    width: 126px;
+    height: 72px;
+}
+.fsecure {
+    width: 177px;
+    height: 52px;
+}
+.microsoft {
+    width: 170px;
+    height: 35px;
+}
+.powervision {
+    width: 154px;
+    height: 102px;
+}
+.tesla {
+    width: 155px;
+    height: 20px;
+}
+.ubtech {
+    width: 158px;
+    height: 39px;
+}
+.toshiba {
+    width: 201px;
+    height: 80px;
+}
+.yhrccu {
+    width: 178px;
+    height: 44px;
+}
+.mimecast {
+    width: 170px;
+    height: 21px;
+}
+.marble {
+    width: 138px;
+    height: 66px;
+}
+.symantec {
+    width: 160px;
+    height: 43px;
+}
+.s2s {
+    width: 139px;
+    height: 83px;
+}
+.vapour {
+    width: 102px;
+    height: 86px;
+}
+.virtualCollege {
+    width: 164px;
+    height: 80px;
+}
+.zen {
+    width: 158px;
+    height: 75px;
 }
