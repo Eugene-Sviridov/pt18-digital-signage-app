@@ -3,12 +3,12 @@ import Navigation from '../../components/Navigation';
 import Container from '../../components/Container';
 
 export default class Home extends Component {
-	render() {
+	render({ goToPage }) {
 		return (
 			<Container
 				noBackground
 			>
-				<Navigation />
+				<Navigation goToPage={goToPage} />
 			</Container>
 		);
 	}

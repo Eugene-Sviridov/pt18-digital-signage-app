@@ -2,16 +2,39 @@
 
 .header {
 	position: relative;
+	:global(.isIn) & {
+		.headerLogo {
+			img {
+				transform: scale(0.588);
+			}
+		}
+		.hashtag {
+			transform: scale(0.69) translateY(-252px);
+		}
+	}
+	:global(.isOut) & {
+		.headerLogo {
+			img {
+				transform: scale(1.69879);
+			}
+		}
+		.hashtag {
+			transform: scale(1.44) translateY(122px);
+		}
+
+	}
 }
 
 .buttonHidden {
 	.headerLogo {
-		padding: 80px 0 0 0;
 		max-width: 423px;
+		img {
+			width: 100%;
+			max-width: 423px;
+		}
 	}
 	.hashtag {
 		font-size: 52px;
-		line-height: 60px;
 		margin-bottom: 0;
 	}
 }
@@ -22,25 +45,38 @@
 	position: absolute;
 	padding: 24px 32px;
 	width: 100%;
+	animation: fadeIn .25s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn { 
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 .headerLogo {
-	padding: 70px 0 5px;
+	padding: 75px 0 5px;
 	text-align: center;
-	max-width: 249px;
 	margin: 0 auto;
 	img {
-		max-width: 100%;
 		width: 100%;
+		max-width: 249px;
+		transform-origin: top center;
+		transition: transform 1s;
 	}
 }
 
 .hashtag {
 	font-size: 36px;
-	line-height: 44px;
+	line-height: 52px;
 	font-weight: $regular;
 	color: #fff;
 	margin-top: 25px;
 	text-align: center;
 	margin-bottom: 30px;
+	transition: transform 1s;
 }

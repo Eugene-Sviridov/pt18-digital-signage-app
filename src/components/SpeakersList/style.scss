@@ -1,10 +1,73 @@
 @import '../../style/variables.scss';
 @import '../Info/style.scss';
 
+.speakersList {
+    // :global(.isOut) & {
+    //     animation: slideOut 1s;
+    // }
+}
+
+@keyframes slideOut {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(200%);
+    }
+}
+
 .speakerListEl {
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
     &:not(:last-child) {
         margin-bottom: 40px;
     }
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.speakerListEl:nth-child(1) {
+    transform: translateX(100%);
+    animation-name: slideInRight;
+
+}
+.speakerListEl:nth-child(2) {
+    transform: translateX(-100%);
+    animation-name: slideInLeft;
+    animation-delay: 1.4s;
+
+}
+.speakerListEl:nth-child(3) {
+    transform: translateX(100%);
+    animation-name: slideInRight;
+    animation-delay: 1.6s;
+}
+.speakerListEl:nth-child(4) {
+    transform: translateX(-100%);
+    animation-name: slideInLeft;
+    animation-delay: 1.8s;
+}
+.speakerListEl:nth-child(5) {
+    transform: translateX(100%);
+    animation-name: slideInRight;
+    animation-delay: 2s;
 }
 
 .speaker {

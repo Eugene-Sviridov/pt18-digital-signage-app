@@ -4,6 +4,19 @@
     align-items: center;
     justify-content: center;
     padding: 60px 60px 0;
+    :global(.isOut) & {
+        animation: slideOut 1s;
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes slideOut {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(200%);
+    }
 }
 
 .vendorEl {
@@ -14,6 +27,13 @@
     margin-bottom: 80px;
 }
 
+.vendorImg {
+    opacity: 0;
+    animation: fadeIn .25s;
+    animation-fill-mode: forwards;
+    animation-delay: 0;
+}
+
 .barracuda {
     width: 170px;
     height: 85px;
@@ -21,104 +41,139 @@
 .citrix {
     width: 170px;
     height: 69px;
+    animation-delay: .1s;
 }
 .dell {
     width: 170px;
     height: 29px;
+    animation-delay: .2s;
 }
 .dell {
     width: 170px;
     height: 29px;
+    animation-delay: .3s;
 }
 .digitalxraid {
     width: 200px;
     height: 110px;
+    animation-delay: .4s;
 }
 .hp {
     width: 100px;
     height: 100px;
+    animation-delay: .5s;
 }
 .huawei {
     width: 93px;
     height: 92px;
+    animation-delay: .6s;
 }
 .ikonic {
     width: 144px;
     height: 46px;
+    animation-delay: .7s;
 }
 .jct600 {
     width: 154px;
     height: 53px;
+    animation-delay: .8s;
 }
 .lenovo {
     width: 194px;
     height: 96px;
+    animation-delay: .9s;
 }
 .bitdefender {
     width: 155px;
     height: 77px;
+    animation-delay: 1s;
 }
 .canon {
     width: 148px;
     height: 31px;
+    animation-delay: 1.1s;
 }
 .dji {
     width: 126px;
     height: 72px;
+    animation-delay: 1.2s;
 }
 .fsecure {
     width: 177px;
     height: 52px;
+    animation-delay: 1.3s;
 }
 .microsoft {
     width: 170px;
     height: 35px;
+    animation-delay: 1.4s;
 }
 .powervision {
     width: 154px;
     height: 102px;
+    animation-delay: 1.5s;
 }
 .tesla {
     width: 155px;
     height: 20px;
+    animation-delay: 1.6s;
 }
 .ubtech {
     width: 158px;
     height: 39px;
+    animation-delay: 1.7s;
 }
 .toshiba {
     width: 201px;
     height: 80px;
+    animation-delay: 1.8s;
 }
 .yhrccu {
     width: 178px;
     height: 44px;
+    animation-delay: 1.9s;
 }
 .mimecast {
     width: 170px;
     height: 21px;
+    animation-delay: 2s;
 }
 .marble {
     width: 138px;
     height: 66px;
+    animation-delay: 2.1s;
 }
 .symantec {
     width: 160px;
     height: 43px;
+    animation-delay: 2.2s;
 }
 .s2s {
     width: 139px;
     height: 83px;
+    animation-delay: 2.3s;
 }
 .vapour {
     width: 102px;
     height: 86px;
+    animation-delay: 2.4s;
 }
 .virtualCollege {
     width: 164px;
     height: 80px;
+    animation-delay: 2.5s;
 }
 .zen {
     width: 158px;
     height: 75px;
+    animation-delay: 2.6s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }

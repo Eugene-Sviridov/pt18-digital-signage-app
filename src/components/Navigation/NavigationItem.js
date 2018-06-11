@@ -1,14 +1,19 @@
 import { Component } from 'preact';
 import style from './style.scss';
-import { Link } from 'preact-router/match';
 import { getRoutePath } from '../../helpers';
 
 export default class NavigationItem extends Component {
-    render({src, href, title}) {
+    navigate = (href) => {
+        this.props.goToPage(getRoutePath(href), {
+            isPageIn: true,
+            isPageOut: false
+        }, 1000);
+    }
+    render({src, href, title, goToPage}) {
         return (
-            <Link className={style.navigationItem} href={getRoutePath(href)}>
+            <button className={style.navigationItem} onClick={() => this.navigate(href)}>
                 <img src={src} />
-            </Link>
+            </button>
         )
     }
 }

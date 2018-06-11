@@ -7,15 +7,18 @@ import { route } from 'preact-router';
 import { getRoutePath } from '../../helpers';
 
 export default class Header extends Component {
-	render({isButtonHidden}) {
+	render({isButtonHidden, href, goToPage}) {
 		const headerClasses = classnames(st.header, {
 			[st.buttonHidden]: isButtonHidden
 		});
 
 		const goHome = () => route('/');
-		const goBack = (href) => {
+		const goBack = (link) => {
 			return () => {
-				route(href ? getRoutePath(href) : '/');
+				goToPage(link ? getRoutePath(link) : '/', {
+					isPageIn: false,
+					isPageOut: true
+				}, 1000);
 			}
 		}
 		
@@ -26,7 +29,7 @@ export default class Header extends Component {
 						<div class={st.headerButtons}>
 							<HeaderButton
 								src="/assets/icons/pt_back_icon.svg"
-								onClick={goBack(this.props.href)}
+								onClick={goBack(href)}
 							/>
 							<HeaderButton
 								src="/assets/icons/pt_home_icon.svg"

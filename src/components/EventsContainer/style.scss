@@ -7,6 +7,29 @@
     margin: 0 auto;
     color: #ffffff;
     padding: 65px 30px;
+    animation: slideIn 1s;
+    animation-fill-mode: forwards;
+    transition: transform 1s;
+    :global(.isOut) & {
+        animation: slideOut 1s;
+    }
+}
+
+@keyframes slideOut {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(200%);
+    }
+}
+@keyframes slideIn {
+    0% {
+        transform: translateY(200%);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 
 .colWrapper {
@@ -72,4 +95,5 @@
     display: flex;
     justify-content: space-between;
 }
+
 

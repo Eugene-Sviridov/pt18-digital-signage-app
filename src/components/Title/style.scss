@@ -5,11 +5,36 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    width: 100%;
     max-width: 397px;
     min-height: 64px;
     background-image: url('/assets/title/tab.png');
     background-size: 100% 100%;
     margin: 40px auto 30px;
+    transition: opacity 1s;
+    animation: fadeIn .25s;
+    animation-fill-mode: forwards;
+    :global(.isOut) & {
+        animation: fadeOut .25s;
+        animation-fill-mode: forwards;
+    }
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 .solid {
