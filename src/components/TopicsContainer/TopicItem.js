@@ -5,9 +5,12 @@ import { route } from 'preact-router';
 import { getRoutePath } from '../../helpers';
 
 export default class TopicItem extends Component {
-    render({src, text, id}) {
+    render({src, text, id, goToPage}) {
         const onItemTitleClick = () => {
-            route(getRoutePath(`topic/${id}`));
+            goToPage(getRoutePath(`topic/${id}`), {
+                isInnerPageIn: true,
+                isInnerPageOut: false
+            }, 1000);
         }
 
         return (

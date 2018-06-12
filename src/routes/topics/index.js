@@ -5,14 +5,14 @@ import TopicsContainer from '../../components/TopicsContainer';
 import topicsArray from './TopicsArray.js';
 
 export default class Topics extends Component {
-    render() {
+    render({goToPage}) {
         return (
             <Container
                 text="topics"
                 shape
                 firstStyle
             >
-              <TopicsContainer topics={topicsArray}/>
+              <TopicsContainer goToPage={goToPage} topics={topicsArray}/>
             </Container>
         )
     }

@@ -7,8 +7,4 @@
     &.noBackground {
         background-color: transparent;
     }
-    &.isOut,
-    &.isIn {
-        transform: translateY(100%);
-    }
 }

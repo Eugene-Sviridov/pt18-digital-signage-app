@@ -4,14 +4,14 @@ import SpeakersList from '../../components/SpeakersList';
 import speakers from './SpeakersArray.js';
 
 export default class Speakers extends Component {
-    render() {
+    render({goToPage}) {
         return (
             <Container
                 text="speakers"
                 shape
                 firstStyle
             >
-                <SpeakersList speakers={speakers} />
+                <SpeakersList goToPage={goToPage} speakers={speakers} />
             </Container>
         );
     }

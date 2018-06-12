@@ -30,7 +30,9 @@ export default class App extends Component {
 		isSpeakerPage: false,
 		isTopicPage: false,
 		isPageIn: false,
-		isPageOut: false
+		isPageOut: false,
+		isInnerPageIn: false,
+		isInnerPageOut: false
 	};
 
 	handleRoute = e => {
@@ -52,7 +54,9 @@ export default class App extends Component {
 			this.setState({
 				...this.state,
 				isPageIn: false,
-				isPageOut: false
+				isPageOut: false,
+				isInnerPageIn: false,
+				isInnerPageOut: false
 			})
 			route(link);
 		}, delay)
@@ -66,7 +70,9 @@ export default class App extends Component {
 	render() {
 		const classNames = classnames({
 			'isIn': this.state.isPageIn,
-			'isOut': this.state.isPageOut
+			'isOut': this.state.isPageOut,
+			'isInnerIn': this.state.isInnerPageIn,
+			'isInnerOut': this.state.isInnerPageOut
 		});
 		return (
 			<div id="app" className={classNames}>
@@ -79,8 +85,8 @@ export default class App extends Component {
 					<Router onChange={this.handleRoute} history={createHashHistory()}>
 						<Home path="/" goToPage={this.goToPage} />
 						<Agenda path="/agenda" />
-						<Topics path="/topics" />
-						<Speakers path="/speakers" />
+						<Topics path="/topics" goToPage={this.goToPage} />
+						<Speakers path="/speakers" goToPage={this.goToPage} />
 						<Speaker path="/speaker/:id" url={this.currentUrl} />
 						<Topic path="/topic/:id" url={this.currentUrl} />
 						<Vendors path="/vendors" />

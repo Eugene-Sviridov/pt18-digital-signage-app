@@ -48,6 +48,10 @@
             top: 0;
         }
     }
+    :global(.isInnerOut) & {
+        animation: slideOut 1s;
+        animation-fill-mode: forwards;
+    }
 }
 
 

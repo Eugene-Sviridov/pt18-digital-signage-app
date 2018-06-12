@@ -4,7 +4,7 @@ import classnames from 'classnames';
 import { route } from 'preact-router';
 import { getRoutePath } from '../../helpers';
 
-const Speaker = ({speaker, odd}) => {
+const Speaker = ({speaker, odd, goToPage}) => {
     const {id, name, title, titleImg, src} = speaker;
     const classNames = classnames(st.speaker, {
         [st.odd]: odd,
@@ -12,7 +12,10 @@ const Speaker = ({speaker, odd}) => {
     });
 
     const onSpeakerClick = () => {
-        route(getRoutePath(`speaker/${id}`));
+        goToPage(getRoutePath(`speaker/${id}`), {
+            isInnerPageIn: true,
+            isInnerPageOut: false
+        }, 1000);
     };
 
     return (

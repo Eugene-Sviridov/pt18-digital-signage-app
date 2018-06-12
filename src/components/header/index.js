@@ -15,10 +15,17 @@ export default class Header extends Component {
 		const goHome = () => route('/');
 		const goBack = (link) => {
 			return () => {
-				goToPage(link ? getRoutePath(link) : '/', {
-					isPageIn: false,
-					isPageOut: true
-				}, 1000);
+				if (link) {
+					goToPage(link ? getRoutePath(link) : '/', {
+						isInnerPageIn: false,
+						isInnerPageOut: true
+					}, 1000);
+				} else {
+					goToPage(link ? getRoutePath(link) : '/', {
+						isPageIn: false,
+						isPageOut: true
+					}, 1000);
+				}
 			}
 		}
 		
