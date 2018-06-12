@@ -31,7 +31,7 @@ const topicsArray = [
     },
     {
         src: '../../assets/topics/things-of-interest.png',
-        title: 'things of interest.',
+        title: 'internet of things.',
         info: 'Everything is online: by 2020 some 50 billion devices will be connected – resulting in countless new applications, business ideas and opportunities. Connected devices are appearing everywhere, transforming business models and our daily lives. From smart homes to smart offices, welcome to the IoT era. At pt18 learn more about the future of SMART everything, see the latest products and find out what IoT will mean to you.',
         id: '6'
     },
