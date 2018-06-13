@@ -13,6 +13,10 @@ import Speakers from '../routes/Speakers';
 import Speaker from '../routes/Speaker';
 import Prizes from '../routes/Prizes';
 import DroneRacing from '../routes/DroneRacing';
+import SocialPosts from '../routes/SocialPosts';
+import Raffle from '../routes/Raffle';
+import PureLotto from '../routes/PureLotto';
+import KeepInTouch from '../routes/KeepInTouch';
 import ContentContainer from '../components/ContentContainer';
 import Redirect from '../components/Redirect';
 import createHashHistory from 'history/createHashHistory';
@@ -69,7 +73,7 @@ export default class App extends Component {
 
 	isSpeakerPage = () => this.currentUrl.indexOf('speaker/') >= 0;
 	isTopicPage = () => this.currentUrl.indexOf('topic/') >= 0;
-	isPrizePage = () => this.currentUrl.indexOf('drone-racing') >= 0;
+	isPrizePage = () => this.currentUrl.indexOf('drone-racing') >= 0 || this.currentUrl.indexOf('social-posts') >= 0 || this.currentUrl.indexOf('raffle') >= 0 || this.currentUrl.indexOf('pure-lotto') >= 0 || this.currentUrl.indexOf('keep-in-touch') >= 0;
 
 	render() {
 		const classNames = classnames({
@@ -96,6 +100,10 @@ export default class App extends Component {
 						<Vendors path="/vendors" />
 						<Prizes path="/prizes" goToPage={this.goToPage} />
 						<DroneRacing path="/drone-racing" />
+						<SocialPosts path="/social-posts" />
+						<Raffle path="/raffle" />
+						<PureLotto path="/pure-lotto" />
+						<KeepInTouch path="/keep-in-touch" />
 					</Router>
 				</ContentContainer>
 				<Credit

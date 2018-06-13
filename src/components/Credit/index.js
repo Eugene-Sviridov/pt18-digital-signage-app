@@ -8,7 +8,11 @@ const Credit = ({ url }) => {
         '/agenda',
         '/vendors',
         '/prizes',
-        '/drone-racing'
+        '/drone-racing',
+        '/social-posts',
+        '/raffle',
+        '/pure-lotto',
+        '/keep-in-touch'
     ];
 
     const isWhiteCreditShouldBeRendered = (url) => {
