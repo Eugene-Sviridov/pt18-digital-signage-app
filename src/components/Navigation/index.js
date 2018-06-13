@@ -24,6 +24,11 @@ export default class Navigation extends Component {
                 href: "vendors",
                 title: "vendors",
                 src: "assets/navigation/vendors.png",
+            },
+            {
+                href: "prizes",
+                title: "prizes",
+                src: "assets/navigation/prizes.png",
             }
         ];
         return (

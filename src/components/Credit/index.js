@@ -6,7 +6,9 @@ const Credit = ({ url }) => {
     const urlWithWhiteCredit = [
         '/',
         '/agenda',
-        '/vendors'
+        '/vendors',
+        '/prizes',
+        '/drone-racing'
     ];
 
     const isWhiteCreditShouldBeRendered = (url) => {

@@ -11,6 +11,8 @@ import Topic from '../routes/Topic';
 import Vendors from '../routes/Vendors';
 import Speakers from '../routes/Speakers';
 import Speaker from '../routes/Speaker';
+import Prizes from '../routes/Prizes';
+import DroneRacing from '../routes/DroneRacing';
 import ContentContainer from '../components/ContentContainer';
 import Redirect from '../components/Redirect';
 import createHashHistory from 'history/createHashHistory';
@@ -41,7 +43,8 @@ export default class App extends Component {
 		this.setState({
 			isHomePage: this.isHomePage(),
 			isSpeakerPage: this.isSpeakerPage(),
-			isTopicPage: this.isTopicPage()
+			isTopicPage: this.isTopicPage(),
+			isPrizePage: this.isPrizePage()
 		});
 	};
 
@@ -66,6 +69,7 @@ export default class App extends Component {
 
 	isSpeakerPage = () => this.currentUrl.indexOf('speaker/') >= 0;
 	isTopicPage = () => this.currentUrl.indexOf('topic/') >= 0;
+	isPrizePage = () => this.currentUrl.indexOf('drone-racing') >= 0;
 
 	render() {
 		const classNames = classnames({
@@ -78,7 +82,7 @@ export default class App extends Component {
 			<div id="app" className={classNames}>
 				<Header
 					isButtonHidden={this.state.isHomePage}
-					href={this.state.isSpeakerPage ? 'speakers' : (this.state.isTopicPage ? 'topics' : false)}
+					href={this.state.isSpeakerPage ? 'speakers' : (this.state.isTopicPage ? 'topics' : this.state.isPrizePage ? 'prizes' :  false)}
 					goToPage={this.goToPage}
 				/>
 				<ContentContainer >
@@ -90,6 +94,8 @@ export default class App extends Component {
 						<Speaker path="/speaker/:id" url={this.currentUrl} />
 						<Topic path="/topic/:id" url={this.currentUrl} />
 						<Vendors path="/vendors" />
+						<Prizes path="/prizes" goToPage={this.goToPage} />
+						<DroneRacing path="/drone-racing" />
 					</Router>
 				</ContentContainer>
 				<Credit

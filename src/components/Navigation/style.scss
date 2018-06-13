@@ -3,10 +3,11 @@
     flex-grow: 1;
     flex-wrap: wrap;
     max-width: 1368px;
-    margin: 214px auto 0;
+    margin: 60px auto 0;
     align-content: flex-start;
     animation: slideIn 1s;
     animation-fill-mode: forwards;
+    justify-content: center;
     :global(.isIn) & {
         animation: slideOut 1s;
         animation-fill-mode: forwards;
@@ -35,10 +36,7 @@
     display: block;
     flex-basis: 50%;
     text-align: center;
-    &:first-child {
-        margin-bottom: 110px;
-    }
-    &:nth-child(2) {
+    &:not(:last-child) {
         margin-bottom: 110px;
     }
     img {

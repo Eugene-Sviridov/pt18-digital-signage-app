@@ -1,0 +1,102 @@
+.prizesInfo {
+    transform: translateY(200%);
+    animation: slideIn 1s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(200%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.prizesInfoHeader {
+    background-color: #8653C1;
+    width: 916px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: 400;
+    padding: 40px 50px;
+    margin: 30px auto 40px;
+    border-radius: 10px;
+    text-align: center;
+    p {
+        margin: 0;
+        &:not(:last-child) {
+            margin: 0 0 60px;
+        }
+    }
+}
+
+.prizesInfoHow {
+    background-color: #8653C1;
+    width: 916px;
+    margin: 150px auto 0;
+    border-radius: 10px;
+    text-align: center;
+    padding: 40px 50px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.prizesInfoHowHeader {
+    font-size: 40px;
+    margin-bottom: 40px;
+
+}
+
+.prizesInfoHowInfo {
+    font-size: 28px;
+}
+
+.prizesInfoList {
+    display: flex;
+    width: 916px;
+    margin: 0 auto;
+    justify-content: space-between;
+
+}
+
+.prizesInfoEl {
+    color: #fff;
+    text-align: center;
+    width: 256px;
+    flex-basis: 256px;
+
+
+}
+
+.prizesInfoElImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 256px;
+    height: 256px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-bottom: 50px;
+    img {
+        max-width: 100%;
+    }
+}
+
+.prizesInfoElNumber {
+    margin-bottom: 20px;
+    font-size: 40px;
+    background-color: #8653C1;
+    padding: 20px;
+    border-radius: 10px;
+
+}
+
+.prizesInfoElInfo {
+    font-size: 32px;
+    background-color: #8653C1;
+    padding: 20px;
+    border-radius: 10px;
+
+}
