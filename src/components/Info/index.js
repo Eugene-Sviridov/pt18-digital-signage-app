@@ -6,7 +6,7 @@ import InfoDescription from './InfoDescription';
 
 export default class Info extends Component {
     render({item, odd, imgBorder, isSpeaker}) {
-        const {src, title, smallTitle, name, info} = item;
+        const {src, twitter, title, smallTitle, name, info} = item;
         const containerClassname = classnames(st.infoContainer, {
             [st.isSpeaker]: isSpeaker
         })
@@ -18,6 +18,7 @@ export default class Info extends Component {
                     title={title}
                     smallTitle={smallTitle}
                     info={info}
+                    twitter={twitter}
                     odd={odd}
                 />
             </div>

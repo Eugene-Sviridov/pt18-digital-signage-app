@@ -5,7 +5,7 @@ import { route } from 'preact-router';
 import { getRoutePath } from '../../helpers';
 
 const Speaker = ({speaker, odd, goToPage}) => {
-    const {id, name, title, titleImg, src} = speaker;
+    const {id, name, twitter, title, titleImg, src} = speaker;
     const classNames = classnames(st.speaker, {
         [st.odd]: odd,
         [st.even]: !odd
@@ -22,6 +22,7 @@ const Speaker = ({speaker, odd, goToPage}) => {
         <div className={classNames} onClick={onSpeakerClick}>
             <div className={st.speakerInfo}>
                 <div class={st.speakerName}>{name}</div>
+                {twitter && <div class={st.speakerTwitter}>{twitter}</div>}
                 <div className={st.speakerTitle}>
                     { title && <span> {title} </span>}
                     { titleImg && <img src={titleImg} />}

@@ -6,7 +6,7 @@ export default class PureLotto extends Component {
         return (
             <PrizesHOC
                 title="pure lotto"
-                subtitle="Talk to any of our partners here today and they'll hand you a pure lotto card. Be in with a chance of winning with our random prize draw later this afternoon."
+                subtitle="Talk to any of our partners here today and they'll hand you a pure lotto card. You'll be entered into our prize draw later this afternoon."
                 items={[
                     {
                         img: '/assets/prizes/cyber_essentials.png',

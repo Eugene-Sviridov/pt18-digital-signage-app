@@ -18,11 +18,11 @@ export default class EventsContainer extends Component {
         },
         {
             time: '10:45 - 11:15',
-            title: 'hands-on-tech'
+            title: 'Sarah Shields, Dell EMC'
         },
         {
             time: '11:15 - 12:00',
-            title: 'Sarah Shields, Dell EMC'
+            title: 'hands-on-tech'
         },
         {
             time: '12:00 - 13:00',
@@ -49,7 +49,7 @@ export default class EventsContainer extends Component {
             title: 'photos'
         },
         {
-            time: '15:35 - 16:00',
+            time: '15:30 - 16:00',
             title: 'event close + prizes'
         },
         {

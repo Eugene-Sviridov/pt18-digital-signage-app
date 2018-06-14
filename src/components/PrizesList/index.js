@@ -15,8 +15,8 @@ class PrizesList extends Component {
         return (
             <div className={st.prizesList}>
                 <div className={st.prizesListHeader}>
-                    <p>This year at pt18 we're giving more prizes away than ever before, <strong>want to win?</strong></p>
-                    <p>Click below to find out how you can get your hands on one today!</p>
+                    <p>This year at pt18 we're giving away more prizes than ever.</p>
+                    <p>Click below to find out how to win.</p>
                 </div>
                 <div className={st.prizesListButtons}>
                     <button className={st.prizesListButton} onClick={this.onClick('drone-racing')}>

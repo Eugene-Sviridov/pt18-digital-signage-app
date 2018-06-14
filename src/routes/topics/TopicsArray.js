@@ -2,7 +2,7 @@ const topicsArray = [
     {
         src: '../../assets/topics/machine-learning.png',
         title: 'AI & Advanced Machine Learning.',
-        info: 'AI changes the world. There is no doubt that digital applications are becoming increasingly complex and capable. In the USA, AI is already being used to fashion legal documents, doctors are using AI for diagnosis and treatment. Whether the digital assistant is called Alexa, Cortana or Siri, a measure of AI is always involved. At pt18 visitors can see how the unlimited opportunities offered by AI translate into new business.',
+        info: 'AI changes the world. There is no doubt that digital applications are becoming increasingly complex and capable. AI is already being used to fashion legal documents, doctors are using AI for diagnosis and treatment. Whether the digital assistant is called Alexa, Cortana or Siri, a measure of AI is always involved. At pt18 visitors can see how the unlimited opportunities offered by AI translate into new business.',
         id: '1'
     },
     {
@@ -38,19 +38,19 @@ const topicsArray = [
     {
         src: '../../assets/topics/mobility.png',
         title: 'mobility.',
-        info: 'Uber, Mytaxi, eMobility, autonomous driving and global car manufacturers that are metamorphosing into mobility service providers: In an age of digitisation, the face of mobility is changing faster than almost any other sector of industry. In the future, cars will no longer merely be a means of going from A to B, they will also function as data providers, Internet nodes and a place for entertainment. pt18 will demonstrate the face of smart mobility in our digital future.',
+        info: 'Uber, Mytaxi, eMobility, autonomous driving and global car manufacturers that are metamorphosing into mobility service providers: In an age of digitisation, the face of mobility is changing faster than almost any other sector of industry. In the future, cars will no longer be merely a means of taking us from point A to point B, they will also function as data providers, Internet nodes and a place for entertainment. pt18 will demonstrate the potential of smart mobility in our digital future.',
         id: '7'
     },
     {
         src: '../../assets/topics/security.png',
         title: 'security.',
-        info: 'Cyber-security is one of the country’s biggest concerns, and will be one of the technology sectors biggest markets moving into 2018. Cybercrime, the Dark Web, hackers: Illegal attacks on corporate and data networks are causing billions of pounds. At pt18 discover how our 3-tier security model, backed by leading security products, stops cyber-crime in business from inception all the way through to end-point.',
+        info: 'Cyber-security is one of the country’s biggest concerns, and will be one of the technology sectors biggest markets moving into 2018. Cybercrime, the Dark Web, hackers: Illegal attacks on corporate and data networks are costing billions of pounds. At pt18 discover how our 3-tier security model, backed by leading security products, stops cyber-crime in business from inception all the way through to end-point. Also hear from experts in Cyber-Security, both independent and The National Police Cyber- Threat Team.',
         id: '8'
     },
     {
         src: '../../assets/topics/communication.png',
         title: 'communications.',
-        info: 'Cyber-security is one of the country’s biggest concerns, and will be one of the technology sectors biggest markets moving into 2018. Cybercrime, the Dark Web, hackers: Illegal attacks on corporate and data networks are causing billions of pounds. At pt18 discover how our 3-tier security model, backed by leading security products, stops cyber-crime in business from inception all the way through to end-point.',
+        info: 'Communications has never been more diverse, whilst also becoming ever-more converged; landline, mobile, IP. The world is moving to hosted telephony conjoined with video and collaboration services. SIP is more cost-effective than traditional ISDN and more flexible too, allowing you to simplify and save recurring costs. Contact Centre is now highly functional; amalgamating voice, video and social streams into one consolidated comms channel. What’s next? WebRTC is set to revolutionise the communications industry.',
         id: '9'
     }
 ]
