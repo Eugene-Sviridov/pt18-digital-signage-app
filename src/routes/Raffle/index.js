@@ -6,7 +6,7 @@ export default class Raffle extends Component {
         return (
             <PrizesHOC
                 title="candlelighters raffle"
-                subtitle="purchase a candlelighters raffle ticket to be in with a chance of winning some great prizes."
+                subtitle="Purchase a candlelighters raffle ticket to be in with a chance of winning some great prizes."
                 items={[
                     {
                         img: '/assets/prizes/6car_track_day.png',
@@ -17,6 +17,11 @@ export default class Raffle extends Component {
                         img: '/assets/prizes/theman_behind_the_curtain.png',
                         title: '2nd prize',
                         info: '£200 Man Behind The Curtain Voucher'
+                    },
+                    {
+                        img: '/assets/prizes/nomad_wallet.png',
+                        title: '3rd prize',
+                        info: 'Nomad wireless wallet'
                     }
                 ]}
                 goToPage={goToPage}

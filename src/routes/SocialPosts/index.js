@@ -6,7 +6,7 @@ export default class SocialPosts extends Component {
         return (
             <PrizesHOC
                 title="top 3 social posts"
-                subtitle="post to our social wall on twitter with #pt18 to be in with a chance to win."
+                subtitle="Post to our social wall on twitter with #pt18 to be in with a chance to win."
                 items={[
                     {
                         img: '/assets/prizes/DELL_v_laptop.png',

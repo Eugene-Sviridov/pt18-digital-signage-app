@@ -37,6 +37,9 @@
     margin: 30px auto 150px;
     border-radius: 10px;
     text-align: center;
+    strong {
+        font-size: 44px;
+    }
     p {
         margin: 0;
         &:not(:last-child) {
@@ -55,7 +58,7 @@
     width: calc(33.333% - 80px);
     display: block;
     border-radius: 50%;
-    margin: 0 40px 30px;
+    margin: 0 40px 80px;
     text-align: center;
     img {
         width: 260px;

@@ -6,7 +6,7 @@ export default class DroneRacing extends Component {
         return (
             <PrizesHOC
                 title="drone racing"
-                subtitle="place 1st, 2nd or 3rd in the DJI drone race to win a prize."
+                subtitle="Place 1st, 2nd or 3rd in the DJI drone race to win a prize."
                 items={[
                     {
                         img: '/assets/prizes/DJI_Trello.png',

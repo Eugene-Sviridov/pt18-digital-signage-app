@@ -15,8 +15,8 @@ class PrizesList extends Component {
         return (
             <div className={st.prizesList}>
                 <div className={st.prizesListHeader}>
-                    <p>this year at pt18 we’re giving more prizes away than ever before want to win?</p>
-                    <p>click below to find out more on what you need to do to win?</p>
+                    <p>This year at pt18 we're giving more prizes away than ever before, <strong>want to win?</strong></p>
+                    <p>Click below to find out how you can get your hands on one today!</p>
                 </div>
                 <div className={st.prizesListButtons}>
                     <button className={st.prizesListButton} onClick={this.onClick('drone-racing')}>
@@ -30,9 +30,6 @@ class PrizesList extends Component {
                     </button>
                     <button className={st.prizesListButton} onClick={this.onClick('pure-lotto')}>
                             <img src="/assets/prizes-navigation/pure lotto@3x.png" />
-                    </button>
-                    <button className={st.prizesListButton} onClick={this.onClick('keep-in-touch')}>
-                            <img src="/assets/prizes-navigation/keep in touch@3x.png" />
                     </button>
                 </div>
             </div>
